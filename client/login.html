@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="he">
+<html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -7,44 +7,56 @@
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-  
+
 <div class="container">
   <div class="grid">
     <div class="col-12 card pad">
-      <h1>התחברות</h1>
-      <p>בדיקת שם משתמש וסיסמה מול המשתמשים ב-LocalStorage. בהצלחה נשמור currentUser ב-SessionStorage.</p>
+
+      <h1>Login</h1>
+      <p>
+        Validates the username and password against users stored in LocalStorage.
+        On success, the current user is saved in SessionStorage.
+      </p>
 
       <div id="msg"></div>
 
       <form class="form" id="loginForm" novalidate>
         <div class="grid">
           <div class="col-6">
-            <label>שם משתמש *</label>
+            <label>Username *</label>
             <input id="username" autocomplete="username" required />
           </div>
+
           <div class="col-6">
-            <label>סיסמה *</label>
-            <input id="password" type="password" autocomplete="current-password" required />
+            <label>Password *</label>
+            <input
+              id="password"
+              type="password"
+              autocomplete="current-password"
+              required
+            />
           </div>
         </div>
 
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn" type="submit">התחבר</button>
-          <a class="btn secondary" href="register.html">אין לי משתמש</a>
+          <button class="btn" type="submit">Login</button>
+          <a class="btn secondary" href="register.html">I don't have an account</a>
         </div>
       </form>
 
       <div class="help" style="margin-top:14px;">
-        אם הגעת לכאן כי ניסית לפתוח דף מוגן (חיפוש/פלייליסטים), אחרי ההתחברות תועבר אוטומטית לדף שביקשת.
+        If you arrived here after trying to access a protected page (Search / Playlists),
+        you will be automatically redirected to that page after successful login.
       </div>
+
     </div>
   </div>
 </div>
 
-  
-  <script src="js/config.js" defer></script>
-  <script src="js/storage.js" defer></script>
-  <script src="js/ui.js" defer></script>
-  <script src="js/login.js" defer></script>
+<script src="js/config.js" defer></script>
+<script src="js/storage.js" defer></script>
+<script src="js/ui.js" defer></script>
+<script src="js/login.js" defer></script>
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="he">
+<html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -7,75 +7,92 @@
   <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-  
+
 <div class="container">
   <div class="card pad">
-    <h1>דף ראשי – WEB CLIENT</h1>
-    <p>פרטי סטודנט וקישורים נדרשים להגשה.</p>
+    <h1>WEB CLIENT – Home Page</h1>
+    <p>Student details and required submission links.</p>
 
     <div class="grid" style="margin-top:14px">
+
+      <!-- Student Details -->
       <div class="col-6 card pad">
-        <h2>פרטי סטודנט</h2>
-        <p class="muted">עדכן/י אם צריך.</p>
+        <h2>Student Details</h2>
+        <p class="muted">Update if needed.</p>
+
         <div class="form">
           <div>
-            <label>שם הסטודנט</label>
-            <input id="studentName" value="מהדי אבו ליל" />
+            <label>Student Name</label>
+            <input id="studentName" value="Mahdi Abulil" />
           </div>
+
           <div>
-            <label>תעודת זהות</label>
+            <label>Student ID</label>
             <input id="studentId" value="212192603" />
           </div>
-          <div class="help">הפרטים נשמרים בדפדפן (LocalStorage) כדי שיופיעו תמיד.</div>
+
+          <div class="help">
+            The details are saved in the browser (LocalStorage) so they will always appear.
+          </div>
         </div>
+
         <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn" id="saveStudentBtn" type="button">שמור פרטים</button>
-          <a class="btn secondary" href="login.html">התחברות</a>
-          <a class="btn secondary" href="register.html">הרשמה</a>
+          <button class="btn" id="saveStudentBtn" type="button">Save Details</button>
+          <a class="btn secondary" href="login.html">Login</a>
+          <a class="btn secondary" href="register.html">Register</a>
         </div>
       </div>
 
+      <!-- Links -->
       <div class="col-6 card pad">
-        <h2>קישורים</h2>
-        <p class="muted">הוסף/י את הקישורים שלך.</p>
+        <h2>Links</h2>
+        <p class="muted">Add your project links.</p>
 
         <div class="form">
           <div>
             <label>GitHub Repository</label>
             <input id="githubUrl" placeholder="https://github.com/USER/REPO" />
           </div>
+
           <div>
-            <label>Live URL (GitHub Pages / Netlify / Vercel וכו')</label>
+            <label>Live URL (GitHub Pages / Netlify / Vercel, etc.)</label>
             <input id="liveUrl" placeholder="https://..." />
           </div>
         </div>
 
         <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
-          <button class="btn" id="saveLinksBtn" type="button">שמור קישורים</button>
-          <a class="btn secondary" id="githubLink" href="#" target="_blank" rel="noreferrer">פתח GitHub</a>
-          <a class="btn secondary" id="liveLink" href="#" target="_blank" rel="noreferrer">פתח אתר בלייב</a>
+          <button class="btn" id="saveLinksBtn" type="button">Save Links</button>
+          <a class="btn secondary" id="githubLink" href="#" target="_blank" rel="noreferrer">
+            Open GitHub
+          </a>
+          <a class="btn secondary" id="liveLink" href="#" target="_blank" rel="noreferrer">
+            Open Live Site
+          </a>
         </div>
 
         <div class="help" style="margin-top:12px">
-          הערה: אל תעלה מפתח YouTube API ל-GitHub ציבורי. שים אותו ב-<code>js/config.js</code> רק מקומית.
+          Note: Do NOT upload your YouTube API key to a public GitHub repository.
+          Keep it locally in <code>js/config.js</code>.
         </div>
       </div>
 
+      <!-- Quick Navigation -->
       <div class="col-12 card pad">
-        <h2>ניווט מהיר</h2>
+        <h2>Quick Navigation</h2>
         <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn secondary" href="search.html">חיפוש</a>
-          <a class="btn secondary" href="playlists.html">פלייליסטים</a>
+          <a class="btn secondary" href="search.html">Search</a>
+          <a class="btn secondary" href="playlists.html">Playlists</a>
         </div>
       </div>
+
     </div>
   </div>
 </div>
 
-  
-  <script src="js/config.js" defer></script>
-  <script src="js/storage.js" defer></script>
-  <script src="js/ui.js" defer></script>
-  <script src="js/index.js" defer></script>
+<script src="js/config.js" defer></script>
+<script src="js/storage.js" defer></script>
+<script src="js/ui.js" defer></script>
+<script src="js/index.js" defer></script>
+
 </body>
 </html>
