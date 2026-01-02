@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="he">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>WEB CLIENT | Playlists</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  
+<div class="container">
+  <div class="card pad">
+    <h1>הפלייליסטים שלי</h1>
+    <p>ניהול הפלייליסטים של המשתמש המחובר: יצירה, מחיקה, חיפוש פנימי, מיון ודירוג.</p>
+
+    <div class="layout" style="margin-top:14px;">
+      <div class="card sidebar">
+        <h2>הספרייה שלי</h2>
+        <button class="btn" id="newPlaylistBtn" type="button">+ פלייליסט חדש</button>
+
+        <div class="playlist-list" id="playlistList"></div>
+
+        <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn secondary" id="playPlaylistBtn" type="button">▶ נגן פלייליסט</button>
+          <button class="btn danger" id="deletePlaylistBtn" type="button">🗑 מחק פלייליסט</button>
+        </div>
+      </div>
+
+      <div class="card pad">
+        <div class="table-actions">
+          <div style="flex:1; min-width: 220px;">
+            <label>חיפוש בתוך הפלייליסט</label>
+            <input id="filterInput" placeholder="חפש לפי שם..." />
+          </div>
+
+          <div style="min-width: 200px;">
+            <label>מיון</label>
+            <select id="sortSelect">
+              <option value="added_desc">חדש → ישן</option>
+              <option value="az">א-ב</option>
+              <option value="rating_desc">דירוג גבוה → נמוך</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="mainStatus"></div>
+        <div id="items"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  <script src="js/config.js" defer></script>
+  <script src="js/storage.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/playlists.js" defer></script>
+</body>
+</html>

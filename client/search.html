@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="he">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>WEB CLIENT | Search</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  
+<div class="container">
+  <div class="card pad">
+    <h1>חיפוש שירים ביוטיוב</h1>
+    <p>חפש/י לפי שם שיר או זמר. התוצאות מוצגות ככרטיסיות, ניתן לנגן ולהוסיף למועדפים.</p>
+
+    <div class="card pad" style="margin-top:14px;">
+      <div class="grid">
+        <div class="col-9">
+          <label>חיפוש</label>
+          <input id="q" placeholder="לדוגמה: Ed Sheeran Perfect" />
+        </div>
+        <div class="col-3" style="display:flex; align-items:flex-end;">
+          <button class="btn" id="searchBtn" type="button" style="width:100%;">חפש</button>
+        </div>
+      </div>
+      <div class="help" style="margin-top:10px;">
+        הערה: כדי שהחיפוש יעבוד, יש להדביק API KEY בקובץ <code>js/config.js</code>.
+      </div>
+    </div>
+
+    <div id="status" style="margin-top:14px;"></div>
+
+    <div class="results" id="results" style="margin-top:14px;"></div>
+  </div>
+</div>
+
+  
+  <script src="js/config.js" defer></script>
+  <script src="js/storage.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/youtube.js" defer></script>
+  <script src="js/search.js" defer></script>
+</body>
+</html>

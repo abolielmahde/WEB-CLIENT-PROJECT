@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="he">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>WEB CLIENT | Register</title>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  
+<div class="container">
+  <div class="grid">
+    <div class="col-12 card pad">
+      <h1>הרשמה</h1>
+      <p>יצירת משתמש חדש ושמירתו ב-LocalStorage.</p>
+
+      <div id="msg"></div>
+
+      <form class="form" id="registerForm" novalidate>
+        <div class="grid">
+          <div class="col-6">
+            <label>שם משתמש *</label>
+            <input id="username" autocomplete="username" required />
+          </div>
+          <div class="col-6">
+            <label>שם פרטי *</label>
+            <input id="firstName" required />
+          </div>
+
+          <div class="col-6">
+            <label>סיסמה *</label>
+            <input id="password" type="password" autocomplete="new-password" required />
+            <div class="help">לפחות 6 תווים, לפחות אות אחת, מספר אחד ותו מיוחד אחד.</div>
+          </div>
+          <div class="col-6">
+            <label>אימות סיסמה *</label>
+            <input id="password2" type="password" autocomplete="new-password" required />
+          </div>
+
+          <div class="col-12">
+            <label>תמונה (URL)</label>
+            <input id="imageUrl" placeholder="https://..." />
+            <div class="help">אם ריק – ישתמש בתמונה ברירת מחדל.</div>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <button class="btn" type="submit">צור משתמש</button>
+          <a class="btn secondary" href="login.html">כבר יש לי משתמש</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  
+  <script src="js/config.js" defer></script>
+  <script src="js/storage.js" defer></script>
+  <script src="js/ui.js" defer></script>
+  <script src="js/register.js" defer></script>
+</body>
+</html>
